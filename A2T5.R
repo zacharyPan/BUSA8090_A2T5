@@ -18,10 +18,9 @@ data <- data.frame(week <- c(1,2,3,4,5,
                                   79,89, 96, 97))
 
 
-# "An online example and What the author wants to improve" part of 
-# essay
+# "Author’s Improvement" part
 p <- ggplot(data, aes(x = week, y=activeCase))+ geom_point()
 p+ transition_time(week) 
-# "Further improvement" part of essay
+# "Further Improvement"
 g <- ggplot(data, aes(x = week, y=activeCase, size = totalDeath))+ geom_point()
 g+  transition_time(week) 
